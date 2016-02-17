@@ -1,0 +1,30 @@
+<div class="formBox">
+<input type="button" id="initLogin" value="LOGIN" /><br>
+	
+		<ul>
+		<li><label for="userName">User Name</label>
+		<input type="text" name="username" id="uName" placeholder="Username">
+		</li> 
+    	<li><input id="userLogin" type="submit" value="Login" />
+    	<input id="userRegister" type="button" value="Register" />
+    	</li>
+        </ul> 
+</div>
+<script>
+$('#initLogin').on('click',function(){
+    $('.formBox').animate({width: '+=10%'},300);
+    $(this).fadeOut("slow",function(){});
+    $('li').fadeIn("slow", function(){
+    $('#uName').focus();
+        })
+
+})
+if (cookieData !== null) {
+    $('#uName').val(cookieData.uName);
+
+} else {
+    console.log('no cookie found');
+
+
+};
+</script>
